@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  	<title>Live</title>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="videojs-qualityselector.css" rel="stylesheet">
+	<link href="video-js.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<video id="example-video" width="800" height="450" class="video-js vjs-default-skin" controls>
+		<source src="http://phoneMars.videoipdata.com:8096/live/c1.m3u8" type="application/x-mpegURL">
+		<source src="http://Mars.videoipdata.com:8090/live/c1.flv">
+		<!--<source src="./bomao.flv">
+		<source src="./year.flv">-->
+	</video>
+
+</body>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<script src="video.js"></script>
+<script src="videojs-qualityselector.min.js"></script>
+<script src="videojs-flash.min.js"></script>
+<script src="videojs-contrib-hls.min.js"></script>
+<script>
+    var player = videojs('example-video' , { "autoplay": false });
+
+    /*player.qualityselector({
+        sources: [
+            { format: 'highres', src: 'http://phoneMars.videoipdata.com:8096/live/c1.m3u8', type: 'application/x-mpegURL'},
+            { format: 'hd1080', src: 'http://Mars.videoipdata.com:8090/live/c1.flv', type: 'video/flv'}
+        ],
+        formats: [
+            { code: 'highres', name: 'High' },
+            { code: 'hd1080', name: '1080p' }
+        ],
+
+        onFormatSelected: function(format) {
+            console.log(format);
+        }
+    });*/
+
+</script>
+
+</html>
